@@ -8,7 +8,7 @@ import BrowseFoods from "./pages/BrowseFoods";
 import FoodDetails from "./pages/FoodDetails";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import SellerDashboard from "./pages/SellerDashboard";
+import AddFood from "./pages/AddFood";
 import MyFoods from "./pages/MyFoods";
 import Profile from "./pages/Profile";
 import MyOrders from "./pages/MyOrders";
@@ -39,7 +39,7 @@ function App() {
         {/* SELLER */}
         <Route path="/seller-orders" element={<SellerOrders />} />
         <Route path="/myfoods" element={<MyFoods />} />
-        <Route path="/dashboard" element={<SellerDashboard />} />
+        <Route path="/dashboard" element={<AddFood />} />
         {/* REVIEW */}
         <Route path="/review/:foodId" element={<ReviewPage />} />
       </Routes>

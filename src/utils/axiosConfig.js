@@ -1,29 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://homefood-api-uka6.onrender.com/api",
 });
-
-instance.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-
-  return config;
-});
-
-instance.interceptors.response.use(
-  (res) => res,
-  (error) => {
-    if (error.response?.status === 401) {
-      alert("Session expired. Please login again.");
-      localStorage.clear();
-      window.location.href = "/login";
-    }
-    return Promise.reject(error);
-  }
-);
 
 export default instance;

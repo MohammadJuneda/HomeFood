@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "../utils/axiosConfig";
 import toast from "react-hot-toast";
 
-const SellerDashboard = () => {
+const AddFood = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
@@ -198,4 +198,4 @@ const SellerDashboard = () => {
   );
 };
 
-export default SellerDashboard;
+export default AddFood;
